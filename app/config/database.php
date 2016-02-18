@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'localhost',
-			'database'  => 'forge',
-			'username'  => 'forge',
-			'password'  => '',
+			'host'      => 'localhost:3306',
+			'database'  => 'hk4dswd_stopchildporn',
+			'username'  => 'hk4dswd_stopshop',
+			'password'  => 'MHdPQggWxG6EwTR2ZETa82zRtPaFTayV9ZpTV3Pd',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
