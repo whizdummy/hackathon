@@ -1,16 +1,30 @@
 <?php
 
-	class ImageReportController{
+	class ImageReportController extends BaseController{
 
 		public function reportImage(){
 
-			$file = Request::('fileImage');
 			$milliseconds = round(microtime(true) * 1000);
-			$path = $file->getRealPath();;
-			$pos = strpos($path,'/public/');
-			if ($pos != false) {
-			    $path = substr($path, $milliseconds);
-			}
+			$fileName = $milliseconds.".".Input::file('fileImage')->getClientOriginalExtension();
+			$path = public_path() . "/reported_images/" ;
+			// $pos = strpos($path,'/public/');
+			// if ($pos !== false) {
+			// 	var_dump("HEEEERE");
+			//     $path = substr($path, $milliseconds);
+			// }
+			Input::file('fileImage')->move($path, $fileName);
+
+			$strName = Request::input('name');
+			$strRemarks = Request::input('remarks');
+
+			DB::table('Report')
+				->insert([
+						'imageReport' => $path.$fileName,
+						'name' => $strName,
+						'remarks' => $strRemarks
+					]);
+
+			echo "success";
 
 		}
 

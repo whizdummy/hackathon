@@ -23,3 +23,5 @@ Route::get('/report-image', function(){
 	return View::make('image-report');
 
 });
+
+Route::post('/report-image', 'ImageReportController@reportImage');
