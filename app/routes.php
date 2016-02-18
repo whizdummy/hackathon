@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('url-report');
+	return View::make('index');
 });
 
 Route::post('/', 'UrlReportController@createReportURL');

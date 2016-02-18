@@ -9,7 +9,7 @@
 		Name:<input type="text" name="name"><br>
 		Url:<input type="text" name="url"><br>
 		Remarks:<input type="text" name="remarks"><br>
-		<button type="submit">fjdskljfsdkj</button>	
+		<button type="submit">Submit</button>	
 	</form>
 	
 </body>
