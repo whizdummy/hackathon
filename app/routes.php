@@ -23,3 +23,5 @@ Route::get('/report-image', function(){
 	return View::make('image-report');
 
 });
+
+Route::get('/send-message', 'TwilioController@sendMessage');
