@@ -1,0 +1,177 @@
+
+
+/*----------------------------------------*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    height: 100%;
+     margin: 0;
+     padding: 0;
+ }
+
+
+
+
+.navigation {
+  width: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: width 0.3s ease-in-out;
+  -webkit-transition: width .3s ease-in-out;
+  -moz-transition: width .3s ease-in-out;
+  -o-transition: width .3s ease-in-out;
+}
+
+
+
+.page-wrap {
+  float: right;
+  width: 100%;
+
+
+  transition: width 0.3s ease-in-out;
+  -webkit-transition: width .3s ease-in-out;
+  -moz-transition: width .3s ease-in-out;
+  -o-transition: width .3s ease-in-out;
+}
+
+
+.close-menu {
+  display: none;
+}
+.open-menu {
+    color: #212121;
+}
+.open-menu:hover {
+    color: #757575;
+}
+
+#main-navigation:target {
+  width: 20%;
+}
+
+#main-navigation:target + .page-wrap {
+  width: 80%;
+}
+#main-navigation:target + .page-wrap .open-menu {
+  display: none;
+}
+#main-navigation:target + .page-wrap .close-menu {
+  display: block;
+  color: #212121;
+}
+
+
+
+/*#main-navigation:target + .page-wrap .main-header {
+  width: 100%;
+  left: 18%;
+}
+*/
+
+#nav-head {
+    margin: 30px 15px;
+
+
+}
+
+#nav-head:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+
+<style type="text/css">
+
+        .wrapper > * {
+          flex: 1 100%;
+        }
+
+        .wrapper {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          flex-direction: row;
+        
+          -webkit-flex-flow: row wrap;
+          flex-flow: row wrap;
+          -moz-flex-flow: row wrap;
+          -o-flex-flow: row wrap;
+        }
+
+      
+
+        .aside1 {
+          background: #9e131e;
+          border-radius: 3px;
+          margin: 10px;
+          text-align: center;
+          width: 100%;
+          height: 30%;
+        }
+
+        .main {
+          background: white;
+          border-radius: 3px;
+          margin: 10px;
+          text-align: center;
+          width: 100px;
+          height: 30%;
+        }
+
+        .aside2 {
+          background: transparent;
+          margin: 10px;
+          text-align: center;
+          width: 100%;
+          height: 30%
+        }
+
+        .aside3 {
+          background: grey;
+          margin: 10px;
+          text-align: center;
+          width: 100%;
+          height: 30%
+        }
+
+        .footer .page-footer {
+          margin: 0;
+        }
+
+
+        .parallax-container {
+             height: 480px;
+           }
+
+
+        @media all and (min-width: 600px) {
+          .aside { flex: 1 auto; }
+        }
+
+        @media all and (min-width: 800px) {
+          /* We invert order of first sidebar and main
+           * And tell the main element to take twice as much width as the other two sidebars 
+           */
+          .main { flex: 2 0px; }
+          .aside1 { order: 1; }
+          .main    { order: 2; }
+          .aside2 { order: 3; }
+          .main    { order: 4; }
+          .aside3   { order: 5; }
+          .footer  { order: 6; }
+        }</style>
