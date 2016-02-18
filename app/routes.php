@@ -34,3 +34,8 @@ Route::get('/test-connection', function() {
 
 	return count($result);
 });
+
+Route::get('/messageReceived', 'TwilioController@receiveMessage');
+
+Route::get('/replyMessage', 'TwilioController@replyMessage');
+
