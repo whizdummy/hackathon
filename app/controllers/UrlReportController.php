@@ -4,11 +4,11 @@
 
 		public function createReportURL(){
 
-			$validator = Validator::make([
-					'url' => 'url'
-				]);
+			// $validator = Validator::make([
+			// 		'url' => 'url'
+			// 	]);
 
-			if (!$validator->fails()){
+			// if (!$validator->fails()){
 
 				if (strlen(Request::input('name')) < 0){
 					//call error
@@ -17,7 +17,7 @@
 				$strUrl = Request::input('url');
 				$strRemarks = Request::input('remarks');
 
-				DB::table('Report')
+				DB::table('tblReport')
 					->insert([
 							'name' => $strName,
 							'urlReport' => $strUrl,
@@ -27,11 +27,11 @@
 
 				//call success
 
-			}else{
+			// }else{
 
-				//call error message
+			// 	//call error message
 
-			}
+			// }
 
 		}
 

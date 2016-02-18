@@ -12,7 +12,8 @@ class CreateTableReport extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('report', function($table) {
+
+		Schema::create('report', function($table) {
 			$table->increments('intReportId');
 			$table->text('strImageReportPath');
 			$table->string('strFullName', 100);

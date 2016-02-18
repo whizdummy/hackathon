@@ -54,11 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => 'hk4.dswd.gov.ph',
-			'port'		=> '2083',
+			'host'      => 'localhost:3306',
 			'database'  => 'hk4dswd_stopchildporn',
-			'username'  => 'hk4dswd_hk4dswd',
-			'password'  => 'pup12345',
+			'username'  => 'hk4dswd_stopshop',
+			'password'  => 'MHdPQggWxG6EwTR2ZETa82zRtPaFTayV9ZpTV3Pd',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
