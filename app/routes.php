@@ -25,3 +25,5 @@ Route::get('/report-image', function(){
 });
 
 Route::post('/report-image', 'ImageReportController@reportImage');
+
+Route::get('/send-message', 'TwilioController@sendMessage');
