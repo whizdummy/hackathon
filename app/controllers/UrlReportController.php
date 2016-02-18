@@ -9,6 +9,10 @@
 				]);
 
 			if (!$validator->fails()){
+
+				if (strlen(Request::input('name')) < 0){
+					//call error
+				}
 				$strName = Request::input('name');
 				$strUrl = Request::input('url');
 				$strRemarks = Request::input('remarks');
@@ -20,6 +24,12 @@
 							'datReport' => date('m/d/Y h:i:s a', time()),
 							'remarks' => $strRemarks
 						]);
+
+				//call success
+
+			}else{
+
+				//call error message
 
 			}
 

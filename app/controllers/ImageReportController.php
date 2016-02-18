@@ -10,6 +10,11 @@
 
 			if (!$validator->fails()){
 
+				if (strlen(Request::input('name')) < 0){
+
+					//call error
+
+				}
 				$milliseconds = round(microtime(true) * 1000);
 				$fileName = $milliseconds.".".Input::file('fileImage')->getClientOriginalExtension();
 				$path = public_path() . "/reported_images/" ;
@@ -30,11 +35,11 @@
 							'remarks' => $strRemarks
 						]);
 
-				echo "success";
+				//call success
 
 			}
 			else{
-				echo "boom";
+				//call error validation
 			}
 
 		}
