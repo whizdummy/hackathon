@@ -55,6 +55,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'hk4.dswd.gov.ph',
+			'port'		=> '2083',
 			'database'  => 'hk4dswd_stopchildporn',
 			'username'  => 'hk4dswd_hk4dswd',
 			'password'  => 'pup12345',
