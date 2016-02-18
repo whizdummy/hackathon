@@ -6,9 +6,9 @@
 </head>
 <body>
 	<form action="{{ URL::to('/') }}" method="POST">
-		<input type="text" name="name">
-		<input type="text" name="url">
-		<input type="text" name="remarks">
+		Name:<input type="text" name="name"><br>
+		Url:<input type="text" name="url"><br>
+		Remarks:<input type="text" name="remarks"><br>
 		<button type="submit">fjdskljfsdkj</button>	
 	</form>
 	

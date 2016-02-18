@@ -17,3 +17,9 @@ Route::get('/', function()
 });
 
 Route::post('/', 'UrlReportController@createReportURL');
+
+Route::get('/report-image', function(){
+
+	return View::make('image-report');
+
+});
