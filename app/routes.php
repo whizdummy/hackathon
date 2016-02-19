@@ -13,7 +13,7 @@
 
 Route::get('/', function()
 {
-	return View::make('url-report');
+	return View::make('index');
 });
 
 Route::post('/', 'UrlReportController@createReportURL');
@@ -40,7 +40,11 @@ Route::post('/test-connection', function() {
 	return "Success";
 });
 
-Route::get('/messageReceived', 'TwilioController@receiveMessage');
+Route::post('/messageReceived', 'TwilioController@receiveMessage');
 
-Route::get('/replyMessage', 'TwilioController@replyMessage');
+Route::post('/replyMessage', 'TwilioController@replyMessage');
+
+Route::get('/try', function(){
+	return View::make('try');
+});
 
