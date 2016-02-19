@@ -17,11 +17,6 @@
 
 				if (!$validator->fails()){
 
-					if (strlen(Request::input('name')) < 0){
-
-						//call error
-
-					}
 					$milliseconds = round(microtime(true) * 1000);
 					$fileName = $milliseconds.".".Input::file('fileImage')->getClientOriginalExtension();
 					$path = public_path() . "/reported_images/" ;
@@ -31,26 +26,31 @@
 					//     $path = substr($path, $milliseconds);
 					// }
 					Input::file('fileImage')->move($path, $fileName);
-
-
-			}
-
-			
-				$strName = Request::input('name');
-				$strRemarks = Request::input('remarks');
-
-				DB::table('Report')
-					->insert([
-							'imageReport' => $path.$fileName,
-							'name' => $strName,
-							'remarks' => $strRemarks
-						]);
-
-				//call success
+				}
 
 			}
 			else{
 				//call error validation
+			}
+
+			$strName = Request::input('name');
+			$strRemarks = Request::input('remarks');
+
+			if (strlen($strName) != 0){
+				DB::table('tblReport')
+					->insert([
+							'strReportImagePath' => $path.$fileName,
+							'strFullName' => $strName,
+							'strRemarks' => $strRemarks,
+							'strUrlReport' => $strUrl,
+							'dtmReport' => DB::raw('NOW()');
+						]);
+				//call success screen
+
+			}else{
+
+				//call error screen
+
 			}
 
 		}
