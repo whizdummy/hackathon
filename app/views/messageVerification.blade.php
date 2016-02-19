@@ -1,9 +1,7 @@
-{
-  "Response": {
-    "Message": {
-      "-action": "/messageReceived",
-      "-method": "POST",
-      "#text": "Store Location: 123 Easy St."
-    }
-  }
-}
+<?php
+    header("content-type: text/xml");
+    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+?>
+<Response>
+    <Message action="/messageReceived" method="POST"></Message>
+</Response>

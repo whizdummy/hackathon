@@ -39,6 +39,10 @@ Route::post('/messageReceived', 'TwilioController@receiveMessage');
 
 Route::post('/replyMessage', 'TwilioController@replyMessage');
 
+Route::post('/messageVerification', function(){
+	return View::make('messageVerification');
+});
+
 Route::get('/try', function(){
 	return View::make('try');
 });
