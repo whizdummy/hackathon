@@ -28,11 +28,16 @@ Route::post('/report-image', 'ImageReportController@reportImage');
 
 Route::get('/send-message', 'TwilioController@sendMessage');
 
-Route::get('/test-connection', function() {
-	$result = DB::table('report')
-	->get();
+Route::post('/test-connection', function() {
+	DB::table('tblReport')
+	->insert([
+		'strFullName' => Request::input('strFullName'),
+		'strUrlReport' => Request::input('strUrlReport'),
+		'strRemarks' => Request::input('strRemarks'),
+		'dtmReport' => DB::raw('NOW()')
+	]);
 
-	return count($result);
+	return "Success";
 });
 
 Route::get('/messageReceived', 'TwilioController@receiveMessage');
