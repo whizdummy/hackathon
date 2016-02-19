@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('index');
 });
 
-Route::post('/', 'UrlReportController@createReportURL');
+Route::post('/', 'ImageReportController@reportImage');
 
 Route::get('/report-image', function(){
 

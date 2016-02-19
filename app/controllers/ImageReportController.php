@@ -26,6 +26,7 @@
 					//     $path = substr($path, $milliseconds);
 					// }
 					Input::file('fileImage')->move($path, $fileName);
+					
 				}
 
 			}
