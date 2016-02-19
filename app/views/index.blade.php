@@ -40,12 +40,12 @@
                                 <h3 class="white-text thin">Report</h3>
                             </div>
                               <div class="col s12">
-                                  <input class="white-text" type="url" name="website" id="sendreport" placeholder="URL: http://www.example.com" pattern="https?://.+">
+                                  <input class="white-text" type="url" name="url" id="sendreport" placeholder="URL: http://www.example.com" pattern="https?://.+">
                               </div>
                               <div class="col s12 file-field">
                                         <div class="btn" style="background-color: #9e131e;">
                                           <i class="material-icons">photo_camera</i>
-                                          <input type="file" multiple accept="image/*,video/*" id="img" name="image" title="Upload Picture/Video" >
+                                          <input type="file" multiple accept="image/*,video/*" id="img" name="fileUpload" title="Upload Picture/Video" >
                                         </div>
                                         <div class="file-path-wrapper">
                                                 <input class="file-path validate white-text" type="text">
