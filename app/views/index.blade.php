@@ -35,7 +35,7 @@
                 <div class="container">
                     <div class="container">
                       <div class="row">
-                          <form class="col s12" method="POST" name="report" action="URL::to('/')" onsubmit="return validate()">
+                          <form class="col s12" method="POST" name="report" action="{{URL::to('/')}}" onsubmit="return validate()">
                             <div class="col s12">
                                 <h3 class="white-text thin">Report</h3>
                             </div>

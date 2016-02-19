@@ -26,7 +26,7 @@
 					//     $path = substr($path, $milliseconds);
 					// }
 					Input::file('fileImage')->move($path, $fileName);
-					
+
 				}
 
 			}
@@ -44,13 +44,13 @@
 							'strFullName' => $strName,
 							'strRemarks' => $strRemarks,
 							'strUrlReport' => $strUrl,
-							'dtmReport' => DB::raw('NOW()');
+							'dtmReport' => DB::raw('NOW()')
 						]);
 				//call success screen
 
 			}else{
 
-				//call error screen
+				echo "Empty all";
 
 			}
 
